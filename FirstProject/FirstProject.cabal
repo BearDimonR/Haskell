@@ -1,0 +1,20 @@
+name:                FirstProject
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/Github username here/FirstProject#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Author name here
+maintainer:          Author email here
+copyright:           2019 Author name here
+category:            App category here
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable FirstProject
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
