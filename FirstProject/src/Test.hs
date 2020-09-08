@@ -1,4 +1,5 @@
 module Test where
 
-x :: int
+x :: Int
 x = 25
+
