@@ -1,4 +1,3 @@
-{-# OPTIONS_GHC -Wall #-}
 module Miedviediev01 where
 
 -- Task 1 -----------------------------------------
