@@ -29,7 +29,7 @@ findAll algo str
 -- + Задача 5 ------------------------------------
 stepA :: Algorithm -> ConfigA -> ConfigA
 stepA algo (p, i, str)
-  | not p = (p, i, str)
+  | not p = error "Can't make next step!"
   | otherwise = (not pr, i+1, substitute (ls, rs, pr) k str)
     where ((ls, rs, pr), k) = head (findAll algo str)
 
@@ -66,12 +66,12 @@ ini pr xs
        initL = length xs
 
 upd :: [Int] -> Int -> Int-> [Int]
-upd reg i n = take i reg ++ n : drop (i+1) reg
+upd reg i n = if length reg <= i then error "Index out of bounds!" else take i reg ++ n : drop (i+1) reg
 
 -- + Задача 9 ------------------------------------
 stepC :: Program -> ConfigC -> ConfigC
 stepC pr (nm, st, reg)
-  | nm > length pr = (nm, st, reg)
+  | nm > length pr = error "Can't make next step!"
   | otherwise =
     case command of
       (Z x) -> (nm + 1, st + 1, upd reg (x-1) 0)
