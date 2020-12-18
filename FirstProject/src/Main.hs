@@ -10,7 +10,8 @@ module Main where
 --import Miedviediev07()
 --import Miedviediev08()
 --import Miedviediev09()
-import Miedviediev10
+-- import Miedviediev10()
+import MiedviedievTask
 
 main :: IO ()
 main = do
